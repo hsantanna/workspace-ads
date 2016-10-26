@@ -11,10 +11,9 @@ public class Estudante {
 	private String firstName;
 	private String lastName;
 	private String pais;
+	private String linguagemFavorita;
 	
 	List<String> opcoesPais;
-	
-	
 	
 	// construtor
 	public Estudante() {
@@ -65,6 +64,14 @@ public class Estudante {
 
 	public List<String> getOpcoesPais() {
 		return opcoesPais;
+	}
+
+	public String getLinguagemFavorita() {
+		return linguagemFavorita;
+	}
+
+	public void setLinguagemFavorita(String linguagemFavorita) {
+		this.linguagemFavorita = linguagemFavorita;
 	}
 
 	
