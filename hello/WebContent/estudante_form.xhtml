@@ -45,6 +45,16 @@
 				<f:selectItem itemValue="PHP" itemLabel="PHP" />
 				<f:selectItem itemValue="Ruby" itemLabel="Ruby" />
 			</h:selectOneRadio>
+			
+			<br/><br/>
+			
+			Linguagens de Programação favoritas do estudante:
+			<h:selectManyCheckbox value="#{estudante.linguagensFavoritas}">
+				<f:selectItem itemValue="Java" itemLabel="Java" />
+				<f:selectItem itemValue="Python" itemLabel="Python" />
+				<f:selectItem itemValue="PHP" itemLabel="PHP" />
+				<f:selectItem itemValue="Ruby" itemLabel="Ruby" />
+			</h:selectManyCheckbox>
 
 		    <h:commandButton value="Enviar" action="#{estudante.salvar}" />
 

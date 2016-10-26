@@ -12,6 +12,7 @@ public class Estudante {
 	private String lastName;
 	private String pais;
 	private String linguagemFavorita;
+	private String[] linguagensFavoritas;
 	
 	List<String> opcoesPais;
 	
@@ -72,6 +73,14 @@ public class Estudante {
 
 	public void setLinguagemFavorita(String linguagemFavorita) {
 		this.linguagemFavorita = linguagemFavorita;
+	}
+
+	public String[] getLinguagensFavoritas() {
+		return linguagensFavoritas;
+	}
+
+	public void setLinguagensFavoritas(String[] linguagensFavoritas) {
+		this.linguagensFavoritas = linguagensFavoritas;
 	}
 
 	
