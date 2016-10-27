@@ -6,22 +6,29 @@
 
     <h:head>
         <title>Formulário de Registro de Estudante</title>
+        
+        <style>
+        	.error {color: red}
+        </style>
+        
     </h:head>
 
 	<h:body>
-
+		
+		
 		<h:form>
+			<h:messages styleClass="error"/>
 
-			Nome: <h:inputText value="#{estudante.firstName}" />		
-
-            <br/><br/>
-
-            Sobrenome: <h:inputText value="#{estudante.lastName}" />
+			Nome: <h:inputText value="#{estudante.firstName}" label="Nome"/>		
 
             <br/><br/>
 
-	 		Pais: 			
-			<h:selectOneMenu value="#{estudante.pais}">
+            Sobrenome: <h:inputText id="last_name" value="#{estudante.lastName}" label="Sobrenome" required="true"/>
+			<h:message for="last_name" styleClass="error"/>
+            <br/><br/>
+
+	 		País: 			
+			<h:selectOneMenu value="#{estudante.pais}" label="País">
 				<f:selectItems value="#{estudante.opcoesPais}" />
 			</h:selectOneMenu>	 
 			
@@ -39,17 +46,18 @@
 
 			<br/><br/>
 			Linguagem de Programação favorita do estudante:
-			<h:selectOneRadio value="#{estudante.linguagemFavorita}">
+			<h:selectOneRadio id="linguagem_favorita" value="#{estudante.linguagemFavorita}" label="Linguagem Favorita" required="true">
 				<f:selectItem itemValue="Java" itemLabel="Java" />
 				<f:selectItem itemValue="Python" itemLabel="Python" />
 				<f:selectItem itemValue="PHP" itemLabel="PHP" />
 				<f:selectItem itemValue="Ruby" itemLabel="Ruby" />
 			</h:selectOneRadio>
+			<h:message for="linguagem_favorita" styleClass="error"/>
 			
 			<br/><br/>
 			
 			Linguagens de Programação favoritas do estudante:
-			<h:selectManyCheckbox value="#{estudante.linguagensFavoritas}">
+			<h:selectManyCheckbox value="#{estudante.linguagensFavoritas}" label="Linguagems Favoritas">
 				<f:selectItem itemValue="Java" itemLabel="Java" />
 				<f:selectItem itemValue="Python" itemLabel="Python" />
 				<f:selectItem itemValue="PHP" itemLabel="PHP" />
