@@ -19,6 +19,11 @@ public class Estudante {
 	// construtor
 	public Estudante() {
 		
+		// É possível popular o formulário inicializando as propriedades:
+		firstName = "João";
+		lastName = "da Silva";
+		pais = "France";
+		
 		// preenche lista de países
 		opcoesPais = new ArrayList<>();
 			
